@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ececec;
+}
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  ::selection {
+    @apply bg-gray-600 text-slate-100;
+  }
+}
+
+@theme {
+  --color-primary: oklch(37.2% 0.044 257.287);
+  --color-span: oklch(62.3% 0.214 259.815);
+  --color-accent: oklch(12.9% 0.042 264.695);
+  --font-display: "Anton", sans-serif;
+}
