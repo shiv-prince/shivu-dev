@@ -39,7 +39,7 @@ const About = () => {
   <span className="font-medium">Flutter</span> for mobile and{" "}
   <span className="font-medium">React</span> for the web. <br /> <br /> I’ve successfully deployed apps to the{" "}
   <span className="font-medium">Play Store and </span>
-  <span className="font-medium">App Store</span>, blending creativity with functionality across platforms.
+  <span className="font-medium">App Store</span>, blending <span className="italic">creativity</span> with functionality across platforms.
 </motion.p>
        {/* <motion.button
                 onClick={handleMailClick}
