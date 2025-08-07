@@ -24,11 +24,11 @@ const HeroNew = () => {
       animate={{ opacity: 1, rotate: 0 }}
       whileHover={{ scale: 1 , rotate: -10}}
       transition={{ duration: 0.5  , ease: "easeInOut" }}
-      className="w-20 h-20 mr-3 rounded-2xl shadow-lg z-10" src="./shivu12.JPG" alt="homeimg"/>
+      className="w-20 h-20 mr-3 rounded-2xl shadow-lg z-10" src="./shivvu.jpg" alt="homeimg"/>
       <h1 className="text-7xl md:text-7xl font-normal text-gray-900 font-display text-shadow-lg z-10">SHIVU</h1>
 
     </div >
-     <p className="flex items-center justify-center text-xl text-gray-500 mt-4 z-10">Flutter FullStack Developer</p>
+     <p className="flex items-center justify-center text-xl text-gray-600 mt-4 z-10">Creative Fullstack Developer</p>
      <div className="flex justify-center gap-6 text-2xl text-gray-600 mt-5 z-10">
           <motion.a
             href="https://github.com/shiv-prince"

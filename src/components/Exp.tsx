@@ -12,9 +12,10 @@ const Exp = () => {
         transition={{ duration: 0.4, ease: "easeOut" }}
         viewport={{ once: false }}
       >
-        <h1 className="text-black text-3xl font-medium flex justify-center mb-6">
-          Projects
-        </h1>
+        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 gap-2">
+  <span>Projects</span>
+  <span className="font-normal text-gray-600">(work)</span>
+</h1>
       </motion.div>
 
       {/* Cards Wrapper */}
