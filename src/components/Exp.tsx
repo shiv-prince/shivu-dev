@@ -83,16 +83,16 @@ const cards = [
       "https://cdn.pixabay.com/photo/2021/09/22/16/07/google-play-6647242_1280.png",
     phoneMockupImage: "./acehours.png",
   },
-  {
-    appName: "Greenverz",
-    appIcon: "./greenverz.png",
-    description:
-      "Greenverz is a platform that connects users with eco-friendly products and services.",
-    playStoreLink: "",
-    playStoreImage:
-      "https://cdn.pixabay.com/photo/2021/09/22/16/07/google-play-6647242_1280.png",
-    phoneMockupImage: "./mockupgreen.png",
-  },
+  // {
+  //   appName: "Greenverz",
+  //   appIcon: "./greenverz.png",
+  //   description:
+  //     "Greenverz is a platform that connects users with eco-friendly products and services.",
+  //   playStoreLink: "",
+  //   playStoreImage:
+  //     "https://cdn.pixabay.com/photo/2021/09/22/16/07/google-play-6647242_1280.png",
+  //   phoneMockupImage: "./mockupgreen.png",
+  // },
 ];
 
 export default Exp;

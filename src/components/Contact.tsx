@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagramSquare ,
+  FaInstagram ,
 } from "react-icons/fa";
-
+import { FaDownload } from "react-icons/fa6";
 const Contact = () => {
   const handleMailClick = () => {
     window.location.href = "mailto:shivuprince771@gmail.com?subject=Hello Shivu";
@@ -54,7 +54,7 @@ const Contact = () => {
             href="https://www.linkedin.com/in/shivu-bo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-700 transition"
+            className="hover:text-black transition"
             whileHover={{ scale: 1.2 }}
           >
             <FaLinkedin className="h-8 w-8 md:h-6 md:w-6" />
@@ -63,11 +63,20 @@ const Contact = () => {
             href="https://www.instagram.com/_shivu_prince_/profilecard/?igsh=M2ZubjNqNDVlc2Q3"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-500 transition"
+            className="hover:text-black transition"
             whileHover={{ scale: 1.2 }}
           >
-            <FaInstagramSquare className="h-8 w-8 md:h-6 md:w-6"  />
+            <FaInstagram className="h-8 w-8 md:h-6 md:w-6"  />
           </motion.a>
+          <motion.a
+           className="hover:text-black transition"
+            whileHover={{ scale: 1.2 }}
+  href="./Shivu-resume.pdf"
+  download
+  
+>
+  <FaDownload className="h-8 w-8 md:h-6 md:w-6"/>
+</motion.a>
           {/* <motion.a
             href="mailto:yourmail@example.com"
             className="hover:text-red-500 transition"

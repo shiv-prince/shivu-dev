@@ -3,8 +3,9 @@ import { MdLocationPin } from "react-icons/md";
 import {
   FaGithub,
   FaLinkedin,
-  FaInstagramSquare,
+  FaInstagram,
 } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa6";
 import GridPathWithMotion from "./GridPathWithMotion";
 
 const HeroNew = () => {
@@ -54,8 +55,17 @@ const HeroNew = () => {
             className="hover:text-black transition"
             whileHover={{ scale: 1.2 }}
           >
-            <FaInstagramSquare className="h-8 w-8 md:h-6 md:w-6"  />
+            <FaInstagram className="h-8 w-8 md:h-6 md:w-6"  />
           </motion.a>
+          <motion.a
+           className="hover:text-black transition"
+            whileHover={{ scale: 1.2 }}
+  href="./Shivu-resume.pdf"
+  download
+  
+>
+  <FaDownload className="h-8 w-8 md:h-6 md:w-6"/>
+</motion.a>
           {/* <motion.a
             href="mailto:yourmail@example.com"
             className="hover:text-red-500 transition"
