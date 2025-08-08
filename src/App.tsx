@@ -1,17 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import About from "./components/About";
 import Exp from "./components/Exp";
 import RevealLoader from "./components/Loader";
 import Skills from "./components/Skills";
 import HeroNew from "./components/HeroNew";
-import { motion } from "motion/react";
-import ReactLenis from "lenis/react";
+import { motion , cancelFrame, frame } from "motion/react";
+import ReactLenis from 'lenis/react'
+import type { LenisRef } from 'lenis/react';
+
 
 // 🔹 Loader Component Inline (you can extract it to its own file)
 
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+   const lenisRef = useRef<LenisRef>(null)
+
+  useEffect(() => {
+    function update(data: { timestamp: number }) {
+      const time = data.timestamp
+      lenisRef.current?.lenis?.raf(time)
+    }
+
+    frame.update(update, true)
+
+    return () => cancelFrame(update)
+  }, [])
+
 
   useEffect(() => {
     // Simulate asset loading or splash timeout
@@ -29,9 +44,9 @@ const App = () => {
     <RevealLoader onComplete={() => setLoading(false)} />
   ) : (
     <>
-    <ReactLenis root />
-    <div className="scroll-smooth overscroll-none">
-       {/* ⬇️ Nav */}
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} >
+      <div className="scroll-smooth overscroll-none">
+        {/* ⬇️ Nav */}
         <div className="fixed left-0 right-0 bottom-8 mx-auto max-w-[1200px] z-50 flex justify-center items-center">
           <motion.nav
             initial={{ opacity: 0, y: 20 }}
@@ -45,17 +60,18 @@ const App = () => {
             <motion.a whileHover={{ color: "#000" }} href="#contact">Contact</motion.a>
           </motion.nav>
         </div>
-      <HeroNew/>
-      <div id="about">
-        <About />
+        <HeroNew />
+        <div id="about">
+          <About />
+        </div>
+        <div>
+          <Skills />
+        </div>
+        <div id="experience">
+          <Exp />
+        </div>
       </div>
-      <div>
-        <Skills/>
-      </div>
-      <div id="experience">
-        <Exp />
-      </div>
-    </div>
+</ReactLenis>
     </>
   );
 };
