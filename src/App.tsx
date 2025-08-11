@@ -7,6 +7,7 @@ import HeroNew from "./components/HeroNew";
 import { motion , cancelFrame, frame } from "motion/react";
 import ReactLenis from 'lenis/react'
 import type { LenisRef } from 'lenis/react';
+import Contact from "./components/Contact";
 
 
 // 🔹 Loader Component Inline (you can extract it to its own file)
@@ -70,7 +71,19 @@ const App = () => {
         <div id="experience">
           <Exp />
         </div>
+         {/* Contact Section Animation */}
+        <motion.div
+          id="contact"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          viewport={{ once: false }}
+        >
+          <Contact  />
+        </motion.div>
+        
       </div>
+      
 </ReactLenis>
     </>
   );

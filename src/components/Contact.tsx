@@ -11,36 +11,39 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      className="flex items-center justify-center pb-30"
+    <>
+     
+<motion.div
+      className="flex items-center justify-center z-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false }}
     >
+      
       <motion.div
-        className="max-w-3xl mx-auto bg-[#fafafa] rounded-3xl px-10 flex flex-col items-center justify-between shadow-md mb-1 py-10"
+        className="w-full mx-auto bg-[#fafafa] mt-8 px-10 flex flex-col items-center justify-between shadow-md mb-1 py-10 pb-30 z-10"
         initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
 
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">Let's Connect</h2>
-        <p className="text-gray-600 mb-8">
-          Whether you have a question, a project idea, or just want to say hello — my inbox is always open!
+       
+        <h2 className="text-3xl font-bold text-gray-800 mb-4 z-10">Let's Connect</h2>
+        <p className="text-gray-600 text-lg mb-4 text-center">
+          Your next idea deserves to be real,<br className="block md:hidden" /> let's make it happen.
         </p>
-
         <motion.button
           onClick={handleMailClick}
-          className="bg-primary hover:bg-accent text-white font-medium py-2 px-10 rounded-full transition duration-300 mb-8"
+          className="bg-primary hover:bg-accent text-white font-medium py-3 px-10 rounded-full transition duration-300 mb-6 z-10"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           Send Email
         </motion.button>
 
-        <div className="flex justify-center gap-6 text-2xl text-gray-600">
+        <div className="flex justify-center gap-6 text-2xl text-gray-600 z-10">
           <motion.a
             href="https://github.com/shiv-prince"
             target="_blank"
@@ -85,8 +88,15 @@ const Contact = () => {
             <FaEnvelope />
           </motion.a> */}
         </div>
+      <div className="text-gray-500 text-sm mt-6 flex items-center space-x-2 z-10 justify-center">
+       <span className="font-medium text-gray-800">Designed by Me 👀</span> <span> | </span> <div className="flex mx-auto justify-center">© 2025 All rights reserved.</div></div>  
+       
       </motion.div>
-    </motion.div>
+      
+     </motion.div>
+     
+    </>
+    
   );
 };
 

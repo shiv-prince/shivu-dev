@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import AppCard from "./AppCard";
-import Contact from "./Contact";
 
 const Exp = () => {
   return (
@@ -14,7 +13,6 @@ const Exp = () => {
       >
         <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 gap-2">
   <span>Projects</span>
-  <span className="font-normal text-gray-600">(work)</span>
 </h1>
       </motion.div>
 
@@ -32,16 +30,7 @@ const Exp = () => {
           </motion.div>
         ))}
 
-        {/* Contact Section Animation */}
-        <motion.div
-          id="contact"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          viewport={{ once: false }}
-        >
-          <Contact  />
-        </motion.div>
+       
       </div>
     </div>
   );
