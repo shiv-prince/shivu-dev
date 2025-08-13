@@ -7,7 +7,6 @@ import {
 } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa6";
 import GridPathWithMotion from "./GridPathWithMotion";
-import DarkMode from "./DarkMode";
 
 const HeroNew = () => {
   return (
