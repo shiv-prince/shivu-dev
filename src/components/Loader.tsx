@@ -22,8 +22,7 @@ const RevealLoader = ({ onComplete }: { onComplete: () => void }) => {
       {[...Array(NUM_SLICES)].map((_, i) => (
         <motion.div
           key={i}
-          className="flex-1 h-full"
-          style={{ backgroundColor: "var(--color-primary)" }} // Change to your brand color
+          className="flex-1 h-full bg-primary dark:bg-darkmode"
           initial={{ y: "-100%" }}
           animate={{ y: "100%" }}
           transition={{

@@ -31,7 +31,7 @@ const AppCard: React.FC<AppCardProps> = ({
 
   return (
     <motion.div
-      className="max-w-3xl mx-auto bg-[#fafafa] rounded-3xl px-10 flex flex-col md:flex-row items-center justify-between shadow-md mb-1 pt-5 md:pt-0"
+      className="max-w-3xl mx-auto bg-[#fafafa] rounded-3xl px-10 flex flex-col md:flex-row items-center justify-between shadow-md mb-1 pt-5 md:pt-0 dark:bg-[#404040] dark:text-white"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
 
@@ -42,10 +42,10 @@ const AppCard: React.FC<AppCardProps> = ({
       <div className="md:w-1/2 text-center md:text-left space-y-2">
         <div className="flex items-center justify-center md:justify-start gap-2">
           <img src={appIcon} alt={`${appName} Icon`} className="w-12 h-12 rounded-lg" />
-          <h2 className="text-2xl font-bold text-gray-800">{appName}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-200">{appName}</h2>
         </div>
 
-        <p className="text-gray-500 text-base">{description}</p>
+        <p className="text-gray-500 text-base dark:text-gray-300">{description}</p>
 
         <div className="flex gap-4 justify-center md:justify-start mt-4">
           <motion.img

@@ -33,7 +33,7 @@ const Skills = () => {
               alt={skill.name}
               className="w-12 h-12 object-contain"
             />
-            <p className="mt-2 text-sm text-black">{skill.name}</p>
+            <p className="mt-2 text-sm text-black dark:text-white">{skill.name}</p>
           </div>
         ))}
       </motion.div>

@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="max-w-[1200px] mx-auto px-4 h-auto my-auto flex-col items-center justify-center align-middle pt-5"
+      className="max-w-[1200px] mx-auto px-4 h-auto my-auto flex-col items-center justify-center align-middle pt-5 "
       
     >
       <motion.div
@@ -19,7 +19,7 @@ const About = () => {
         animate={ { opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 z-10">
+        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 z-10 dark:text-white">
           About
         </h1>
       </motion.div>
@@ -29,7 +29,7 @@ const About = () => {
   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
   transition={{ duration: 0.6, ease: [0.42, 0, 0.58, 1] }}
   viewport={{ once: false, amount: 0.3 }}
-  className="text-gray-700 leading-relaxed max-w-3xl mx-auto mt-4 text-left text-[1.3rem] z-10"
+  className="text-gray-700 leading-relaxed max-w-3xl mx-auto mt-4 text-left text-[1.3rem] z-10 dark:text-gray-200"
 >
   I'm a{" "}
   <span className="font-semibold text-span">Fullstack Mobile & Web Developer</span>{" "}

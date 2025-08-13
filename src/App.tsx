@@ -8,6 +8,7 @@ import { motion , cancelFrame, frame } from "motion/react";
 import ReactLenis from 'lenis/react'
 import type { LenisRef } from 'lenis/react';
 import Contact from "./components/Contact";
+import DarkMode from "./components/DarkMode";
 
 
 // 🔹 Loader Component Inline (you can extract it to its own file)
@@ -46,19 +47,20 @@ const App = () => {
   ) : (
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} >
-      <div className="scroll-smooth overscroll-none">
+      <div className="bg-[#ececec] dark:bg-darkmode scroll-smooth overscroll-none">
         {/* ⬇️ Nav */}
         <div className="fixed left-0 right-0 bottom-8 mx-auto max-w-[1200px] z-50 flex justify-center items-center">
           <motion.nav
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="flex gap-4 text-black md:text-gray-700 bg-white/10 backdrop-blur-[3px] border border-white/90 shadow-2xl rounded-2xl px-5 py-4 hover:bg-white/40 hover:backdrop-blur-lg transition duration-300"
+            className="flex gap-4 text-black md:text-gray-700 bg-white/10 backdrop-blur-[3px] border border-white/90 shadow-2xl rounded-2xl px-5 py-4 hover:bg-white/40 hover:backdrop-blur-lg transition duration-300 dark:text-white"
           >
-            <motion.a whileHover={{ color: "#000" }} href="#">Home</motion.a>
-            <motion.a whileHover={{ color: "#000" }} href="#about">About</motion.a>
-            <motion.a whileHover={{ color: "#000" }} href="#experience">Projects</motion.a>
-            <motion.a whileHover={{ color: "#000" }} href="#contact">Contact</motion.a>
+            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#">Home</motion.a>
+            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#about">About</motion.a>
+            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#experience">Projects</motion.a>
+            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#contact">Contact</motion.a>
+            <DarkMode/>
           </motion.nav>
         </div>
         <HeroNew />

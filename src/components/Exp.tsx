@@ -11,7 +11,7 @@ const Exp = () => {
         transition={{ duration: 0.4, ease: "easeOut" }}
         viewport={{ once: false }}
       >
-        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 gap-2">
+        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 gap-2 dark:text-white">
   <span>Projects</span>
 </h1>
       </motion.div>

@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5173,
     cors: true,
     hmr: {
-      host: 'e894029e8a60.ngrok-free.app',
+      host: 'f59efed977ad.ngrok-free.app',
       protocol: 'wss',
     },
   },
