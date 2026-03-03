@@ -4,31 +4,28 @@ import Exp from "./components/Exp";
 import RevealLoader from "./components/Loader";
 import Skills from "./components/Skills";
 import HeroNew from "./components/HeroNew";
-import { motion , cancelFrame, frame } from "motion/react";
-import ReactLenis from 'lenis/react'
-import type { LenisRef } from 'lenis/react';
+import { motion, cancelFrame, frame } from "motion/react";
+import ReactLenis from "lenis/react";
+import type { LenisRef } from "lenis/react";
 import Contact from "./components/Contact";
 import DarkMode from "./components/DarkMode";
 
-
 // 🔹 Loader Component Inline (you can extract it to its own file)
-
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-   const lenisRef = useRef<LenisRef>(null)
+  const lenisRef = useRef<LenisRef>(null);
 
   useEffect(() => {
     function update(data: { timestamp: number }) {
-      const time = data.timestamp
-      lenisRef.current?.lenis?.raf(time)
+      const time = data.timestamp;
+      lenisRef.current?.lenis?.raf(time);
     }
 
-    frame.update(update, true)
+    frame.update(update, true);
 
-    return () => cancelFrame(update)
-  }, [])
-
+    return () => cancelFrame(update);
+  }, []);
 
   useEffect(() => {
     // Simulate asset loading or splash timeout
@@ -46,47 +43,65 @@ const App = () => {
     <RevealLoader onComplete={() => setLoading(false)} />
   ) : (
     <>
-      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} >
-      <div className="bg-[#ececec] dark:bg-darkmode scroll-smooth overscroll-none">
-        {/* ⬇️ Nav */}
-        <div className="fixed left-0 right-0 bottom-8 mx-auto max-w-[1200px] z-50 flex justify-center items-center">
-          <motion.nav
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-            className="flex gap-4 text-black md:text-gray-700 bg-white/10 backdrop-blur-[3px] border border-white/90 shadow-2xl rounded-2xl px-5 py-4 hover:bg-white/40 hover:backdrop-blur-lg transition duration-300 dark:text-white"
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
+        <div className="bg-[#ececec] dark:bg-darkmode scroll-smooth overscroll-none">
+          {/* ⬇️ Nav */}
+          <div className="fixed left-0 right-0 bottom-8 mx-auto max-w-[1200px] z-50 flex justify-center items-center">
+            <motion.nav
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="flex gap-4 text-black md:text-gray-700 bg-white/10 backdrop-blur-[3px] border border-white/90 shadow-2xl rounded-2xl px-5 py-4 hover:bg-white/40 hover:backdrop-blur-lg transition duration-300 dark:text-white"
+            >
+              <motion.a
+                className="hover:text-black dark:hover:text-gray-300"
+                href="#"
+              >
+                Home
+              </motion.a>
+              <motion.a
+                className="hover:text-black dark:hover:text-gray-300"
+                href="#about"
+              >
+                About
+              </motion.a>
+              <motion.a
+                className="hover:text-black dark:hover:text-gray-300"
+                href="#experience"
+              >
+                Projects
+              </motion.a>
+              <motion.a
+                className="hover:text-black dark:hover:text-gray-300"
+                href="#contact"
+              >
+                Contact
+              </motion.a>
+              <DarkMode />
+            </motion.nav>
+          </div>
+          <HeroNew />
+          <div id="about">
+            <About />
+          </div>
+          <div>
+            <Skills />
+          </div>
+          <div id="experience">
+            <Exp />
+          </div>
+          {/* Contact Section Animation */}
+          <motion.div
+            id="contact"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            viewport={{ once: false }}
           >
-            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#">Home</motion.a>
-            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#about">About</motion.a>
-            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#experience">Projects</motion.a>
-            <motion.a className="hover:text-black dark:hover:text-gray-300" href="#contact">Contact</motion.a>
-            <DarkMode/>
-          </motion.nav>
+            <Contact />
+          </motion.div>
         </div>
-        <HeroNew />
-        <div id="about">
-          <About />
-        </div>
-        <div>
-          <Skills />
-        </div>
-        <div id="experience">
-          <Exp />
-        </div>
-         {/* Contact Section Animation */}
-        <motion.div
-          id="contact"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          viewport={{ once: false }}
-        >
-          <Contact  />
-        </motion.div>
-        
-      </div>
-      
-</ReactLenis>
+      </ReactLenis>
     </>
   );
 };

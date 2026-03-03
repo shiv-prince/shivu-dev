@@ -12,8 +12,8 @@ const Exp = () => {
         viewport={{ once: false }}
       >
         <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 gap-2 dark:text-white">
-  <span>Projects</span>
-</h1>
+          <span>Projects</span>
+        </h1>
       </motion.div>
 
       {/* Cards Wrapper */}
@@ -29,8 +29,6 @@ const Exp = () => {
             <AppCard {...card} />
           </motion.div>
         ))}
-
-       
       </div>
     </div>
   );
@@ -39,9 +37,19 @@ const Exp = () => {
 // Extracted card data for cleaner map usage
 const cards = [
   {
+    appName: "Tetra Motors",
+    appIcon: "./tetra.webp",
+    description:
+      "Tetra is an all-in-one EV charging app that helps you find nearby stations, start and track charging in real time, and pay securely—whether you’re commuting or on a road trip.",
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.tetramotors.TetraApp&hl=en_IN",
+    playStoreImage:
+      "https://cdn.pixabay.com/photo/2021/09/22/16/07/google-play-6647242_1280.png",
+    phoneMockupImage: "./tetra.png",
+  },
+  {
     appName: "Xelend",
-    appIcon:
-      "./Xeleneicon.webp",
+    appIcon: "./Xeleneicon.webp",
     description:
       "Xelend is a full-stack extension plugin designed for financial institutions, including Microfinance, NBFCs, and Banks.",
     playStoreLink:
@@ -52,8 +60,7 @@ const cards = [
   },
   {
     appName: "AceMitra",
-    appIcon:
-      "./acemitraicon.webp",
+    appIcon: "./acemitraicon.webp",
     description:
       "AceMitra is a comprehensive platform designed to empower micro-entrepreneurs and small businesses.",
     playStoreLink:
