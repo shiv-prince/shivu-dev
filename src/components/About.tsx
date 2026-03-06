@@ -9,18 +9,17 @@ const About = () => {
   return (
     <div
       id="about"
-      className="max-w-[1200px] mx-auto px-4 h-auto my-auto z-50 flex-col items-center justify-center align-middle pt-5 "
+      className="max-w-[1200px] mx-auto px-4 h-auto my-auto flex-col items-center justify-center align-middle pt-5 "
     >
-      <motion.div
+      <motion.p
         //ref={ref}
+        className="z-50 text-black text-3xl font-medium flex justify-start md:justify-center mb-6  dark:text-white"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
-        <h1 className="text-black text-3xl font-medium flex justify-start md:justify-center mb-6 z-50 dark:text-white">
-          About
-        </h1>
-      </motion.div>
+        About
+      </motion.p>
 
       <motion.p
         initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}

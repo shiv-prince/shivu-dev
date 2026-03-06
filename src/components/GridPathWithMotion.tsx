@@ -16,9 +16,7 @@ const GridPathWithMotion: React.FC = () => {
   useEffect(() => {
     const observer = new MutationObserver(() => {
       setTheme(
-        document.documentElement.classList.contains("dark")
-          ? "dark"
-          : "light"
+        document.documentElement.classList.contains("dark") ? "dark" : "light",
       );
     });
 
@@ -57,7 +55,7 @@ const GridPathWithMotion: React.FC = () => {
         };
 
   return (
-    <div className="min-h-screen w-full absolute top-0 left-0 z-0">
+    <div className="min-h-screen w-full absolute top-0 left-0 z-0 overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 z-0" style={gridStyle} />
 
