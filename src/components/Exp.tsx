@@ -37,6 +37,17 @@ const Exp = () => {
 // Extracted card data for cleaner map usage
 const cards = [
   {
+    appName: "Mockup App",
+    appIcon: "./mock-logo.png",
+    description:
+      "Create beautiful device mockups for your app screenshots in seconds. Perfect for portfolios, Play Store listings, and social media.",
+    playStoreLink:
+      "https://github.com/shiv-prince/mockup",
+    playStoreImage:
+      "https://raw.githubusercontent.com/rubenpgrady/get-it-on-github/refs/heads/main/get-it-on-github.png",
+    phoneMockupImage: "./mockup.png",
+  },
+  {
     appName: "Tetra Motors",
     appIcon: "./tetra.webp",
     description:
