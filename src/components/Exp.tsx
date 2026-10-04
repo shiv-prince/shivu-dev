@@ -37,6 +37,17 @@ const Exp = () => {
 // Extracted card data for cleaner map usage
 const cards = [
   {
+    appName: "Tetar CMS",
+    appIcon: "./cms.webp",
+    description:
+      "Tetar CMS is a powerful content management system that allows you to create, manage, and publish content effortlessly. It provides a user-friendly interface and robust features for seamless content management.",
+    playStoreLink:
+      "https://play.google.com/store/apps/details?id=com.tetramotors.TetraCmsApp&hl=en_IN",
+    playStoreImage:
+      "https://cdn.pixabay.com/photo/2021/09/22/16/07/google-play-6647242_1280.png",
+    phoneMockupImage: "./cmshome.png",
+  },
+  {
     appName: "Mockup App",
     appIcon: "./mock-logo.png",
     description:
